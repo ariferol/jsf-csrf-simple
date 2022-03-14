@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>JSF 2.2 CSRF Protection Demo</title>
+    </h:head>
+    <h:body>
+        <h:form prependId="false" >
+            <h3>Cross-site request forgery protection</h3>
+            <p>Go to a protected page via POSTBACK</p>
+            <p><h:commandButton id="button_postback" value="Go to POSTBACK protected view"
+                                action="/content/common/protected_page"/></p>
+
+            <p>Go to a protected page via NON-POSTBACK</p>
+            <p><h:button id="button_non_postback" value="Go to NON-POSTBACK protected view"
+                         outcome="/content/common/protected_page"/></p>
+        </h:form>
+    </h:body>
+</html>
+

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+    <title>JSF 2.2 CSRF Sample</title>
+    <style type="text/css">
+        .textPlacement {
+            margin: 12px;
+        }
+    </style>
+</h:head>
+<h:body>
+    <h2>JSF 2.2 CSRF Sample</h2>
+    <h:form id="loginForm">
+        <div id="userNameDiv" class="textPlacement">
+            <h:outputLabel value="Username: " />
+            <h:inputText  id="username" class="username"  value="#{loginBean.userName}" maxlength="11" required="true" 
+                          requiredMessage="Lütfen kullanıcı adınızı giriniz" disabled="true"/>
+        </div>
+        <div id="passwordDiv" class="textPlacement">
+            <h:outputLabel value="Password: " />
+            <h:inputSecret id="password" class="password" value="#{loginBean.password}" maxlength="11" disabled="true"/>
+        </div>
+        <div id="submitBtn" class="textPlacement">
+            <h:commandButton value="Login" action="#{loginBean.login}" />
+        </div>
+    </h:form>
+</h:body>
+</html>
